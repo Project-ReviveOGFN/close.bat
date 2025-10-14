@@ -1,4 +1,8 @@
 @echo off
+REM ============================================
+REM Close Script for Fortnite Launcher
+REM To download: Click "Raw" then Save As
+REM ============================================
 REM Close existing Fortnite and related processes
 
 taskkill /F /IM FortniteClient-Win64-Shipping.exe >nul 2>&1
