@@ -1,0 +1,11 @@
+"@echo off\n"
+":loop\n"
+"tasklist /fi \"PID eq " + std::to_string(GetCurrentProcessId()) + "\" | find /i \"" + std::to_string(GetCurrentProcessId()) + "\" >nul\n"
+"if errorlevel 1 (\n"
+"    taskkill /f /im FortniteClient-Win64-Shipping.exe >nul 2>&1\n"
+"    taskkill /f /im FortniteClient-Win64-Shipping_BE.exe >nul 2>&1\n"
+"    taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe >nul 2>&1\n"
+"    exit\n"
+")\n"
+"timeout /t 1 /nobreak >nul\n"
+"goto loop\n";
